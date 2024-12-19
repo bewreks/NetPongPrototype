@@ -3,7 +3,7 @@ using Cysharp.Threading.Tasks;
 using Interfaces;
 namespace Authorize
 {
-    public class UIAuthorization : IAuthorization, IDisposable
+    public class UIAuthorizationService : IAuthorizationService
     {
 
         public UniTask<IAuthorizationModel> GetModel()

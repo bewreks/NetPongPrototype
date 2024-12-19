@@ -1,10 +1,8 @@
 ﻿using Cysharp.Threading.Tasks;
 namespace Interfaces
 {
-    public interface IAuthorization
+    public interface IAuthorizable
     {
-        UniTask<IAuthorizationModel> GetModel();
-        
         UniTask<string> Authorize();
     }
 }

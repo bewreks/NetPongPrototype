@@ -18,7 +18,7 @@ namespace Screens.StartScreen
             builder.Register<StartScreenController>(Lifetime.Singleton)
                    .AsImplementedInterfaces()
                    .AsSelf();
-            builder.Register<IAuthorization, AutoAuthorization>(Lifetime.Scoped)
+            builder.Register<IAuthorizationService, AutoAuthorizationService>(Lifetime.Scoped)
                    .AsImplementedInterfaces()
                    .AsSelf();
             builder.Register<IRelayConnection, LocalRelayConnection>(Lifetime.Scoped);

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Threading;
+﻿using System.Threading;
 using Cysharp.Threading.Tasks;
 using Interfaces;
 using Unity.Services.Authentication;
@@ -8,7 +7,7 @@ using VContainer.Unity;
 
 namespace Authorize
 {
-    public class AutoAuthorization : IAuthorization, IInitializable, IDisposable
+    public class AutoAuthorizationService : IAuthorizationService, IInitializable
     {
         private AuthorizationModel _authorizationModel;
         
