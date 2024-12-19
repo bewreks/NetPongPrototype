@@ -1,9 +1,15 @@
 {
-    "name": "Interfaces",
+    "name": "StartScreen",
     "rootNamespace": "",
     "references": [
+        "GUID:699639b370414c98bed4142db5b50da4",
+        "GUID:33516fc2981744188bddaf0a1177e8d4",
+        "GUID:45946621a5044b6fbf6ef2154fcbbc41",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:b4e1853d006445d9992cd4dc12cc8dbf",
+        "GUID:869df2f23b5e4e04a96f8a07d4dfb7fd",
         "GUID:f51ebe6a0ceec4240a699833d6309b23",
-        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
+        "GUID:1491147abca9d7d4bb7105af628b223e"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

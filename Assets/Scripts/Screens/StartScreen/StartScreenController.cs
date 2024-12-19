@@ -1,15 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Interfaces;
+using Lobby;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using VContainer;
 using VContainer.Unity;
 
-namespace Lobby
+namespace Screens.StartScreen
 {
-    public class LobbyController : IInitializable, IDisposable
+    public class StartScreenController : IInitializable, IDisposable
     {
         [Inject] private IRelayConnection _connection;
         [Inject] private IAuthorization _authorization;
