@@ -4,11 +4,10 @@ using Interfaces;
 
 namespace Lobby
 {
-    public interface ILobbyService : IModelContainer<ILobbyModel>, IDisposable
+    public interface ILobbyService : IDisposable
     {
         public UniTask<ILobbyModel> CreateLobby();
-        public UniTask<ILobbyModel> JoinLobby();
-        public UniTask<ILobbyModel> JoinLobby(string code);
-        public UniTask LeaveLobby(ILobbyModel model);
+        public UniTask<ILobbyModel> FindLobby();
+        public UniTask<ILobbyModel> FindLobby(string code);
     }
 }
