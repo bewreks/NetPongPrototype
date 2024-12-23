@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 
 namespace Lobby
 {
-    public class LocalRelayConnection : IRelayConnection
+    public class LocalRelayConnectionServiceService : IRelayConnectionService
     {
         private bool _tryingToJoin = true;
 

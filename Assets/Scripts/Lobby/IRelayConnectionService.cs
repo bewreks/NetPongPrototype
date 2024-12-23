@@ -5,7 +5,7 @@ using VContainer.Unity;
 
 namespace Lobby
 {
-    public interface IRelayConnection : IDisposable
+    public interface IRelayConnectionService : IDisposable
     {
         event Action<ulong> OnClientConnected; 
         

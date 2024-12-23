@@ -19,7 +19,7 @@ using Object = UnityEngine.Object;
 
 namespace Lobby
 {
-    public class UnityRelayConnection : IRelayConnection
+    public class UnityRelayConnectionServiceService : IRelayConnectionService
     {
         private const string RoomName = "RoomName";
         

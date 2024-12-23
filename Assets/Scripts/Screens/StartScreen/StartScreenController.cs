@@ -12,7 +12,7 @@ namespace Screens.StartScreen
 {
     public class StartScreenController : IInitializable, IDisposable
     {
-        [Inject] private IRelayConnection _connection;
+        [Inject] private IRelayConnectionService _connectionService;
         [Inject] private IAuthorizationService _authorizationService;
         [Inject] private LifetimeScope _scope;
 
@@ -21,9 +21,9 @@ namespace Screens.StartScreen
         public async void Initialize()
         {
             _ids = new List<ulong>();
-            _connection.OnClientConnected += OnClientConnected;
+            _connectionService.OnClientConnected += OnClientConnected;
             var model = await _authorizationService.GetModel();
-            _connection.Initialize(model);
+            _connectionService.Initialize(model);
         }
 
         private void OnClientConnected(ulong id)
@@ -38,7 +38,7 @@ namespace Screens.StartScreen
 
         public void Dispose()
         {
-            _connection.OnClientConnected -= OnClientConnected;
+            _connectionService.OnClientConnected -= OnClientConnected;
         }
     }
 }

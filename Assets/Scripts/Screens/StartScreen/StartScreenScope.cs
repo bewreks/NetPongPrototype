@@ -13,7 +13,6 @@ namespace Screens.StartScreen
         {
             var preloading = new Preloading.Preloading();
             preloading.AddStep(new StartMessagesLoadingStep(), 0);
-            preloading.AddStep(new LobbyServiceLoader(), 0);
             await preloading.StartLoading(builder);
 
             builder.Register<StartScreenController>(Lifetime.Singleton)
@@ -22,7 +21,7 @@ namespace Screens.StartScreen
             builder.Register<IAuthorizationService, AutoAuthorizationService>(Lifetime.Scoped)
                    .AsImplementedInterfaces()
                    .AsSelf();
-            builder.Register<IRelayConnection, LocalRelayConnection>(Lifetime.Scoped);
+            builder.Register<IRelayConnectionService, LocalRelayConnectionServiceService>(Lifetime.Scoped);
         }
     }
 }
